@@ -1,4 +1,4 @@
-var initial_size = 15;
+var initial_size = '15';
 
 $(document).ready(function(){
 	populate(initial_size);
@@ -6,18 +6,22 @@ $(document).ready(function(){
 
 function populate(size){
 	$('.main-table').empty();
-	
 	var $size = size;
+	var $cl;
+	console.log($size);
+	
 	switch($size){
-		case 15:
-			 $cl = 'box';
+		case '15':
+			$cl = 'box';
 			break;
-		case 31:
+		case '31':
 			 $cl = 'bigger-box';
+			 console.log("case 31");
 			break;
-		case 63:
+		case '63':
 			 $cl = 'biggest-box';
-			break;
+			 console.log("case 63");
+			 break;
 		default:
 			break;
 	}
@@ -27,7 +31,7 @@ function populate(size){
 		$tr = $("<tr></tr>");
 		for(var j=0; j < $size; j++){
 			$div = $("<div class=" +$cl+"></div>");
-			$div.css('background-color', 'lightslategrey');
+			$div.css('background-color', 'slategrey');
 			$tr.append($("<td></td>").append($div));
 			}
 		$(".main-table").append($tr);
@@ -39,8 +43,14 @@ function run(){
 	$('.box').hover(function(){
 		$(this).css('background-color', 'black');
 	});
-	
+	$('.bigger-box').hover(function(){
+		$(this).css('background-color', 'black');
+	});
+	$('.biggest-box').hover(function(){
+		$(this).css('background-color', 'black');
+	});
 	$('button').click(function(){
+		console.log($(this).val());
 		populate($(this).val());
 	});
 };

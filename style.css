@@ -11,17 +11,14 @@ header {
 
 .main-table{
 	margin: 0 auto;
+	margin-top: 10px;
 	width: 800px;
 	height: 600px;
+	background-color: lightslategrey;
 }
 
 .box{
 	border:     1px solid black;
-	transition: all 0.2s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-	   -moz-transition: all 0.2s ease-in;
-	    -ms-transition: all 0.2s ease-in;
-	     -o-transition: all 0.2s ease-in;
 	height: 35px;
 	width: 100%;
 	margin: 0 auto;
@@ -29,3 +26,18 @@ header {
 }
 
 
+.bigger-box{
+	border:     1px solid black;
+	height: 15px;
+	width: 15px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.biggest-box{
+	border:     1px solid black;
+	height: 5px;
+	width: 5px;
+	margin: 0 auto;
+	padding: 0;
+}
